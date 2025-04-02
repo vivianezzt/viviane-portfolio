@@ -1,11 +1,11 @@
 import { Module } from '@nestjs/common';
 import { TecnologiaController } from './tecnologia.controller';
-import { TecnologiaProvider } from './tecnologia.provider';
+import { TecnologiaPrisma } from './tecnologia.prisma';
 import { DbModule } from 'src/db/db.module';
 
 @Module({
   imports: [DbModule],
   controllers: [TecnologiaController],
-  providers: [TecnologiaProvider]
+  providers: [TecnologiaPrisma]
 })
-export class TecnologiaModule {}
+export class TecnologiaModule { }
