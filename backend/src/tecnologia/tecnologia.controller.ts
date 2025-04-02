@@ -1,17 +1,13 @@
 import { Controller, Get } from '@nestjs/common';
 import { Tecnologia } from '@core';
+import { TecnologiaProvider } from './tecnologia.provider';
 
 @Controller('tecnologias')
 export class TecnologiaController {
+    constructor(private readonly repo: TecnologiaProvider) {}
     @Get()
     async obterTodas(): Promise<Tecnologia[]> {
-        return [{
-            id: 1,
-            nome: 'JavaScript',
-            descricao: 'Linguagem de programação para desenvolvimento web.',
-            imagem: 'https://example.com/javascript.png',
-            destaque: true,
-        }];
+        return this.repo.obterTodas();
     }
 
 }
