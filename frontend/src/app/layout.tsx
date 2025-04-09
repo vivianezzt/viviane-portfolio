@@ -2,11 +2,13 @@ import type { Metadata } from "next";
 import { Montserrat } from "next/font/google";
 import "./globals.css";
 
+const font = Montserrat({ subsets: ["latin"] });
+
 export const metadata: Metadata = {
-  title: "Portfolio",
-  description: "Meu portfolio de projetos",
+  title: "Portfólio Viviane",
+  description: "Meu portfolio de projetos pessoais",
 };
-const fonte = Montserrat({subsets: ["latin"]});
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -15,7 +17,7 @@ export default function RootLayout({
   return (
     <html lang="pt-BR">
       <body
-        className={`${fonte.className} antialiased`}
+        className={`${font.className} antialiased`}
       >
         {children}
       </body>
