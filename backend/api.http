@@ -15,3 +15,6 @@ GET http://localhost:3000/projetos
 ###
 GET http://localhost:3000/projetos/3
 
+### Testar redirecionamento para WhatsApp
+GET http://localhost:4000/contato
+
