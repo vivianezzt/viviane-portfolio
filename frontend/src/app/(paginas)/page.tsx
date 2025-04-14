@@ -1,8 +1,8 @@
-import Cabecalho from "@/components/shared/Cabecalho";
-import Container from "@/components/shared/Container";
+import Principal from "@/components/lading/Principal";
+
 
 export default function Home() {
   return (
-    <Cabecalho />
+   <Principal />  
   );
 }
